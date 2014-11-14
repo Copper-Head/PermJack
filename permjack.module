@@ -1,0 +1,11 @@
+function mymodule_flush_caches() {
+
+  $data = module_invoke_all('my_custom_hook');
+  if (empty($data)) {
+
+    // If nobody is hijacking permissions so do nothing.
+    return;
+  }
+
+  // Parse the array of stuff we got back and wipe/reset all permissions based on that.
+}
